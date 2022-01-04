@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* @link https://utopia.fyi/type/calculator?c=375,15,1.2,1440,24,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+    --step--2: clamp(0.65rem, 0.58rem + 0.29vw, 0.84rem);
+    --step--1: clamp(0.78rem, 0.66rem + 0.52vw, 1.13rem);
+    --step-0: clamp(0.94rem, 0.74rem + 0.85vw, 1.50rem);
+    --step-1: clamp(1.13rem, 0.82rem + 1.31vw, 2.00rem);
+    --step-2: clamp(1.35rem, 0.89rem + 1.98vw, 2.67rem);
+    --step-3: clamp(1.62rem, 0.94rem + 2.90vw, 3.55rem);
+    --step-4: clamp(1.94rem, 0.96rem + 4.20vw, 4.74rem);
+    --step-5: clamp(2.33rem, 0.93rem + 5.98vw, 6.31rem);
+}
+
+body {
+    font-size: var(--step-0);
+}
+
+
+body p,
+button {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    
+}
+
+body, h2, button {
+    color:  hsl(0, 0%, 95%);
+    margin: 1em 0;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+}
+
+.container {
+    width: min(60%, 20rem );
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.col1 {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 3em;
+    padding: 2em;
+}
+
+.col2 {
+    background-color: hsl(184, 100%, 22%);
+    padding: 2em;
+}
+
+.col3 {
+    background-color: hsl(179, 100%, 13%);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 2em;
+}
+
+.btn__1 {
+    color:hsl(31, 77%, 52%);
+    padding: 1em 2em;
+    border-radius: 40px;
+    margin-top: 3em;
+    border-color:hsl(31, 77%, 52%);
+    font-weight: 700;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.btn__2 {
+    color:hsl(184, 100%, 22%);
+    padding: 1em 2em;
+    border-radius: 40px;
+    margin-top: 3em;
+    border-color: hsl(184, 100%, 22%);
+    font-weight: 700;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.btn__3 {
+    color: hsl(179, 100%, 13%);
+    padding: 1em 2em;
+    border-radius: 40px;
+    margin-top: 3em;
+    border-color: hsl(179, 100%, 13%);
+    font-weight: 700;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+
+@media (min-width: 1000px) {
+    .container {
+        flex-direction: row;
+        margin: 3em auto 0;
+        width: 73.125rem;
+    }
+
+    .col1 {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .col3 {
+        border-radius: 0;
+    }
+}
